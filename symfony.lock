@@ -472,27 +472,20 @@
             "./config/packages/messenger.yaml"
         ]
     },
-    "symfony/webpack-encore-bundle": {
-        "version": "1.14",
+    "symfony/yaml": {
+        "version": "v6.0.3"
+    },
+    "symfonycasts/reset-password-bundle": {
+        "version": "1.13",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
-            "version": "1.10",
-            "ref": "642c9239e1c76e037f5b65446d09eba836ea147f"
+            "version": "1.0",
+            "ref": "97c1627c0384534997ae1047b93be517ca16de43"
         },
         "files": [
-            "./assets/app.js",
-            "./assets/bootstrap.js",
-            "./assets/controllers.json",
-            "./assets/controllers/hello_controller.js",
-            "./assets/styles/app.css",
-            "./config/packages/webpack_encore.yaml",
-            "./package.json",
-            "./webpack.config.js"
+            "./config/packages/reset_password.yaml"
         ]
-    },
-    "symfony/yaml": {
-        "version": "v6.0.3"
     },
     "twig/extra-bundle": {
         "version": "v3.4.0"

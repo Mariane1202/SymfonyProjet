@@ -1,0 +1,67 @@
+
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Produits!{% endblock %}
+
+{% block body %}
+<section id="contact" class="get-started">
+  <div class="container">
+    <div class="row text-center">
+      <h1 class="display-3 fw-bold text-capitalize">Get started</h1>
+      <div class="heading-line"></div>
+      <p class="lh-lg">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero illum architecto modi.
+      </p>
+    </div>
+
+    <!-- START THE CTA CONTENT  -->
+    <div class="row text-black">
+      <div class="col-12 col-lg-6 gradient shadow p-3">
+        <div class="cta-info w-100">
+          <h4 class="display-4 fw-bold">Liste Produits</h4>
+          <table class="table table-hover">
+                <thead>
+                    <tr>
+                    <th scope="col">Identifiant</th>
+                     <th scope="col">Name</th>
+                      <th scope="col">Stock</th>
+                       <th scope="col">Libelle</th>
+                        <th scope="col">Price</th>
+                         
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for product in products %}
+                   <tr class="table-primary">
+                   <th scope="row">{{product.id}}</th>
+                    <th scope="row">{{product.name}}</th>
+                     <th scope="row">{{product.stock}}</th>
+                     <th scope="row">{{product.lib}}</th>
+                       <th scope="row">{{product.price}}</th>
+                      
+                       
+                   </tr>
+                   
+                  {% endfor %}
+
+
+                </tbody>
+
+           </table>
+          
+          
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 bg-black shadow p-3">
+        <div class="form w-100 pb-2">
+          <h4 class="display-3--title mb-5">Ajout Produit</h4>
+         {{form(form)}}
+        </div>
+      </div>
+    </div>
+  </div>
+      
+</section>
+
+{% endblock %}
